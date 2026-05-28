@@ -15,13 +15,13 @@ import type {
   VibePluginFactory,
 } from "@vibecontrols/plugin-sdk/contract";
 
-import { OpenssfScorecardProvider } from "./provider.js";
+import { ScorecardProvider } from "./provider.js";
 
 const PLUGIN_NAME = "security-scorecard";
-const PLUGIN_VERSION = "2026.528.1";
+const PLUGIN_VERSION = "2026.528.2";
 
 export const createPlugin: VibePluginFactory = (_ctx: ProfileContext): VibePlugin => {
-  const provider = new OpenssfScorecardProvider();
+  const provider = new ScorecardProvider();
   const telemetry = new TelemetryEmitter(PLUGIN_NAME, PLUGIN_VERSION);
 
   const lifecycle = createLifecycleHooks({
@@ -55,4 +55,4 @@ export const createPlugin: VibePluginFactory = (_ctx: ProfileContext): VibePlugi
 };
 
 export default createPlugin;
-export { OpenssfScorecardProvider } from "./provider.js";
+export { ScorecardProvider, OpenssfScorecardProvider } from "./provider.js";
