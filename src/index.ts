@@ -18,7 +18,7 @@ import type {
 import { ScorecardProvider } from "./provider.js";
 
 const PLUGIN_NAME = "security-scorecard";
-const PLUGIN_VERSION = "2026.528.2";
+const PLUGIN_VERSION = "2026.528.4";
 
 export const createPlugin: VibePluginFactory = (_ctx: ProfileContext): VibePlugin => {
   const provider = new ScorecardProvider();
