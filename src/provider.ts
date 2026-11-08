@@ -76,8 +76,7 @@ export class ScorecardProvider implements SecurityProvider {
     if (!scorecardEntry) {
       throw new Error("openssf-scorecard-provider: scorecard missing from tools manifest");
     }
-    const dataDir =
-      this.host?.getDataDir?.() ?? path.join(os.homedir(), ".boff/vibecontrols");
+    const dataDir = this.host?.getDataDir?.() ?? path.join(os.homedir(), ".boff/vibecontrols");
     this.toolPath = await resolveToolPath(
       {
         dataDir,
